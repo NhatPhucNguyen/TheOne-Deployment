@@ -5,31 +5,35 @@
   
   <div class="row justify-content-center mt-2 border border-4 p-3 bg-light form-container" style="width: 60%;">
     <div class="col-md-8">      
-      <form action="/store-list/add" method="post">
+      <form method="post">
         <h1 class="text-center mb-3"><%= title %></h1>
         <div class="row g-3">
           <div class="col-md-6">
-            <label for="storeName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="storeName" name="storeName" placeholder="" required>
+            <label for="productName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="productName" name="productName" placeholder="" required>
           </div>
           <div class="col-md-6">
             <label for="type" class="form-label">Type</label>
             <input type="text" class="form-control" id="type" name="type" placeholder="" required>
           </div>
-
-          <div class="col-sm-12">
-            <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" id="location" name="location" placeholder="" required>
-          </div>         
-
           <div class="col-sm-12">
             <label for="about" class="form-label">About</label>
             <textarea class="form-control" id="about" name="about" placeholder="" cols="30" rows="5" required></textarea>            
           </div>
+          <div class="col-sm-12">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" min="0" placeholder="" required>
+          </div>
+
+          <div class="col-sm-12">
+            <label for="condition" class="form-label">Condition</label>
+            <input type="text" class="form-control" id="review" name="condition" placeholder="" required>
+          </div>
+
           <hr class="my-4">
           <div class="container btn-bottom-container d-flex justify-content-around">
             <input class="btn btn-success btn-lg" type="submit" value="Add">
-            <a href="/store-list" class="btn btn-warning btn-lg">
+            <a href="javascript:history.back()" class="btn btn-warning btn-lg">
               Cancel
             </a>
           </div>
